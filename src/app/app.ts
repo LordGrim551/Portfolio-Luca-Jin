@@ -1,14 +1,14 @@
 import { Component, signal, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TypingAnimationService } from './typing-animation';
-import { InitialLoadingScreenComponent } from './preloader/preloader.component';
+import { PreloaderComponent } from './preloader/preloader.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, InitialLoadingScreenComponent, NavbarComponent],
+  imports: [CommonModule, PreloaderComponent, NavbarComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
