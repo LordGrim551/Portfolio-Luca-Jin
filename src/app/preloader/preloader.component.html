@@ -1,16 +1,25 @@
 <div *ngIf="isLoading" class="preloader-container">
   <div class="preloader-content">
+
+    <!-- Círculo giratorio central (decorativo) -->
     <div class="preloader-circle">
       <div class="preloader-element"></div>
-      <div class="preloader-element"></div>
-      <div class="preloader-element"></div>
-      <div class="preloader-element"></div>
     </div>
+
+    <!-- Texto WELCOME con animación sincronizada -->
     <div class="preloader-logo">
-      <h2 class="preloader-text">Luca Jin</h2>
+      <h2 class="preloader-text" [class.active]="progress > 0">{{ welcomeText }}</h2>
     </div>
-    <div class="progress-container">
-      <div class="progress-bar" [style.width.%]="progress"></div>
+
+    <!-- Progreso por iconos -->
+    <div class="icon-progress">
+      <div 
+        class="progress-icon" 
+        *ngFor="let icon of icons; let i = index" 
+        [class.active]="progress / 20 > i">
+        ✦
+      </div>
     </div>
+
   </div>
 </div>

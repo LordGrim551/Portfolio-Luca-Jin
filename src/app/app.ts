@@ -5,10 +5,11 @@ import { PreloaderComponent } from './preloader/preloader.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, PreloaderComponent, NavbarComponent],
+  imports: [CommonModule,  NavbarComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
