@@ -1,0 +1,59 @@
+/* Estilos específicos para el componente principal */
+
+/* Ajustes para dispositivos móviles (hasta 640px) */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Ajustes para tablets (641px a 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Ajustes para ordenadores (1025px en adelante) */
+@media (min-width: 1025px) {
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    max-width: 1280px;
+  }
+}
+
+/* Estilos para las transiciones entre breakpoints */
+.transition-layout {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilos para los placeholders de imágenes */
+.placeholder-image {
+  background-color: #374151; /* bg-gray-700 */
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+

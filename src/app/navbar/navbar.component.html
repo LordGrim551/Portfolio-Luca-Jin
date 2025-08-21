@@ -1,0 +1,119 @@
+<!-- Barra de navegación responsive -->
+<nav
+  class="fixed text-xs border  p-4 top-4 left-1/2 z-50 transform -translate-x-1/2 
+         w-[95vw] max-w-3xl bg-black/60 backdrop-blur-md shadow-lg rounded-full px-6 py-2
+         transition-all duration-300 border-white sm:border-neutral-700"
+  [ngClass]="{'scrolled': isScrolled}">
+
+  <!-- Desktop -->
+  <ul class="hidden lg:flex w-full justify-center gap-6 items-center">
+    <li *ngFor="let link of navLinksDesktop">
+      <a [href]="link.url"
+         class="text-white hover:text-green-400 transition-colors font-medium px-2 py-1 rounded-md">
+        {{ link.text }}
+      </a>
+    </li>
+  </ul>
+
+  <!-- Tablet -->
+  <ul class="hidden md:flex lg:hidden w-full justify-center gap-6 items-center">
+    <li *ngFor="let link of navLinksTablet">
+      <a [href]="link.url"
+         class="text-white hover:text-green-400 transition-colors font-medium px-2 py-1 rounded-md">
+        {{ link.text }}
+      </a>
+    </li>
+  </ul>
+
+  <!-- Mobile -->
+<!-- Mobile -->
+<!-- Mobile -->
+<ul class="flex md:hidden w-full justify-center items-center">
+  <li>
+    <a href="#home-mobile"
+       class="flex flex-col items-center text-center px-2 py-1">
+
+      <!-- Nombre compacto -->
+      <span class="text-sm font-semibold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+        Luca Jin
+      </span>
+
+      <!-- Subtítulo pequeño -->
+      <span class="text-[10px] text-neutral-400 uppercase tracking-wide">
+        Web Developer
+      </span>
+    </a>
+  </li>
+</ul>
+
+
+</nav>
+
+
+
+<!-- Bottom bar flotante solo móvil, estilo header -->
+<nav
+  class="fixed  border border-green-400 bottom-4 left-1/2 z-50 -translate-x-1/2 w-[95vw] max-w-3xl bg-black/60 backdrop-blur-md shadow-lg rounded-full px-4 py-2 flex justify-between items-center md:hidden transition-all duration-300">
+
+  <a href="#home-mobile"
+     (click)="setActive(0)"
+     [ngClass]="{'bg-green-400 text-black rounded-full': activeIndex === 0, 'text-gray-200 hover:text-green-400': activeIndex !== 0}"
+     class="flex flex-col items-center text-xs font-medium transition-colors px-2 py-1">
+    <lucide-angular [img]="House" class="my-icon"></lucide-angular>
+    Inicio
+  </a>
+
+  <a href="#technologies-mobile-tablet"
+     (click)="setActive(1)"
+     [ngClass]="{'bg-green-400 text-black rounded-full': activeIndex === 1, 'text-gray-200 hover:text-green-400': activeIndex !== 1}"
+     class="flex flex-col items-center text-xs font-medium transition-colors px-2 py-1">
+    <lucide-angular [img]="SquareCode" class="my-icon"></lucide-angular>
+    Tecnologías
+  </a>
+
+  <a href="#experience-mobile-tablet"
+     (click)="setActive(2)"
+     [ngClass]="{'bg-green-400 text-black rounded-full': activeIndex === 2, 'text-gray-200 hover:text-green-400': activeIndex !== 2}"
+     class="flex flex-col items-center text-xs font-medium transition-colors px-2 py-1">
+    <lucide-angular [img]="Briefcase" class="my-icon"></lucide-angular>
+    Experiencia
+  </a>
+
+  <a href="#projects-mobile-tablet"
+     (click)="setActive(3)"
+     [ngClass]="{'bg-green-400 text-black rounded-full': activeIndex === 3, 'text-gray-200 hover:text-green-400': activeIndex !== 3}"
+     class="flex flex-col items-center text-xs font-medium transition-colors px-2 py-1">
+    <lucide-angular [img]="FileArchive" class="my-icon"></lucide-angular>
+    Proyectos
+  </a>
+
+  <a href="#education-mobile-tablet"
+     (click)="setActive(4)"
+     [ngClass]="{'bg-green-400 text-black rounded-full': activeIndex === 4, 'text-gray-200 hover:text-green-400': activeIndex !== 4}"
+     class="flex flex-col items-center text-xs font-medium transition-colors px-2 py-1">
+    <lucide-angular [img]="GraduationCapIcon" class="my-icon"></lucide-angular>
+    Skills
+  </a>
+
+  <a href="#contact-mobile-tablet"
+     (click)="setActive(5)"
+     [ngClass]="{'bg-green-400 text-black rounded-full': activeIndex === 5, 'text-gray-200 hover:text-green-400': activeIndex !== 5}"
+     class="flex flex-col items-center text-xs font-medium transition-colors px-2 py-1">
+    <lucide-angular [img]="Phone" class="my-icon"></lucide-angular>
+    Contacto
+  </a>
+</nav>
+
+<!-- <nav class="fixed border border-green-400 bottom-4 left-1/2 z-50 -translate-x-1/2 w-[95vw] max-w-3xl bg-black/60 backdrop-blur-md shadow-lg rounded-full px-4 py-2 flex justify-between items-center md:hidden transition-all duration-300">
+  <a *ngFor="let link of navLinks; let i = index"
+     href="{{link.url}}"
+     (click)="setActive(i)"
+     [ngClass]="{
+       'bg-green-400 w-32 text-black rounded-full': activeIndex === i,
+       'text-gray-200 hover:text-green-400': activeIndex !== i
+     }"
+     class="flex flex-col items-center text-xs font-medium transition-colors px-2 py-1">
+    <lucide-angular [img]="getIcon(link.text)" class="my-icon"></lucide-angular>
+    {{ link.text }}
+  </a>
+</nav> -->

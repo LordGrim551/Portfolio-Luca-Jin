@@ -1,0 +1,285 @@
+/* Estilos para la barra de navegación responsive */
+
+/* Variables de colores y transiciones */
+:root {
+  --navbar-bg: rgba(15, 23, 42, 0.7);
+  --navbar-bg-scrolled: rgba(15, 23, 42, 0.85);
+  --navbar-text: #ffffff;
+  --navbar-text-hover: #4ade80;
+  --navbar-border: rgba(255, 255, 255, 0.1);
+  --transition-speed: 0.3s;
+  --border-radius: 12px;
+}
+
+/* Estilos base del navbar */
+.navbar {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: 90%;
+  height: 50px;
+  background-color: var(--navbar-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: all var(--transition-speed) ease;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo cuando se hace scroll */
+.navbar.scrolled {
+  background-color: var(--navbar-bg-scrolled);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  height: 45px;
+}
+
+/* Contenedor del navbar */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navbar-text);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color var(--transition-speed) ease;
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.logo-link:hover {
+  color: var(--navbar-text-hover);
+}
+
+.logo-link::after {
+  display: none;
+}
+
+/* Enlaces de navegación para desktop */
+.navbar-links {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 0.5rem;
+}
+
+.nav-link {
+  color: var(--navbar-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  position: relative;
+  transition: all var(--transition-speed) ease;
+  opacity: 0.85;
+  border-radius: var(--border-radius);
+}
+
+.nav-link:hover {
+  color: var(--navbar-text-hover);
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Eliminar efecto de subrayado en hover */
+.nav-link::after {
+  display: none;
+}
+
+/* Botón de contacto */
+.contact-button {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background-color: #4ade80;
+  color: #fff;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all var(--transition-speed) ease;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.contact-button:hover {
+  background-color: #3cce74;
+  transform: translateY(-1px);
+}
+
+/* Botón hamburguesa */
+.hamburger-button {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1100;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-speed) ease;
+}
+
+.hamburger-button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--navbar-text);
+  transition: all var(--transition-speed) ease;
+  border-radius: var(--border-radius);
+}
+
+/* Animación del botón hamburguesa optimizada para rendimiento */
+.hamburger-button.open .hamburger-line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+  will-change: transform;
+}
+
+.hamburger-button.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+  will-change: opacity;
+}
+
+.hamburger-button.open .hamburger-line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+  will-change: transform;
+}
+
+/* Menú móvil */
+.mobile-menu {
+  position: fixed;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  height: 0;
+  background-color: var(--navbar-bg-scrolled);
+  overflow: hidden;
+  transition: all var(--transition-speed) ease;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+}
+
+.mobile-menu.open {
+  height: auto;
+  max-height: 80vh;
+  visibility: visible;
+  opacity: 1;
+}
+
+.mobile-menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile-nav-item {
+  margin: 1.5rem 0;
+}
+
+.mobile-nav-link {
+  color: var(--navbar-text);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: color var(--transition-speed) ease;
+}
+
+.mobile-nav-link:hover {
+  color: var(--navbar-text-hover);
+}
+
+.mobile-action {
+  margin-top: 2rem;
+}
+
+.mobile-contact-button {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background-color: #4ade80;
+  color: #fff;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all var(--transition-speed) ease;
+  margin: 1rem 0;
+}
+
+.mobile-contact-button:hover {
+  background-color: #3cce74;
+  transform: translateY(-1px);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .navbar-links,
+  .navbar-action {
+    display: none;
+  }
+
+  .hamburger-button {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+/* Utilidades */
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .desktop-only {
+    display: block;
+  }
+}

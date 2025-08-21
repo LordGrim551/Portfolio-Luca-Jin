@@ -1,0 +1,26 @@
+<div class="preloader-container" *ngIf="isLoading">
+  <div class="preloader-content">
+    <!-- Elemento central del preloader -->
+    <div class="preloader-circle">
+      <div class="preloader-element"></div>
+      <div class="preloader-element"></div>
+      <div class="preloader-element"></div>
+      <div class="preloader-element"></div>
+    </div>
+    
+    <!-- Logo o texto central -->
+    <div class="preloader-logo">
+      <h2 class="preloader-text">Luca Jin</h2>
+    </div>
+    
+    <!-- Barra de progreso -->
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Contenido principal que se muestra después de cargar -->
+<div [ngClass]="{'content-loaded': !isLoading, 'content-hidden': isLoading}">
+  <ng-content></ng-content>
+</div>
