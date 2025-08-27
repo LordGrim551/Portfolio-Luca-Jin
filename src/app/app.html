@@ -246,7 +246,7 @@
               <div class="flex items-center">
                 <div class="w-10 h-10 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">
                   <!-- Placeholder para logo -->
-                   <img src="assets/svg/rc.png" alt="Reclamaclick" class="w-10 h-10" />
+                  <img src="assets/svg/rc.png" alt="Reclamaclick" class="w-10 h-10" />
                 </div>
                 <div>
                   <h3 class="text-lg font-bold">Figma & UI/UX Designer</h3>
@@ -269,7 +269,7 @@
               <div class="flex items-center">
                 <div class="w-10 h-10 bg-gray-700 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">
                   <!-- Placeholder para logo -->
-                   <img src="assets/svg/sociallovers.jfif" alt="sociallovers" class="w-10 h-10 rounded-lg" />
+                  <img src="assets/svg/sociallovers.jfif" alt="sociallovers" class="w-10 h-10 rounded-lg" />
                 </div>
                 <div>
                   <h3 class="text-lg font-bold">Game developer</h3>
@@ -281,7 +281,8 @@
               </div>
             </div>
             <p class="text-gray-300 text-sm">
-              Contribuí al desarrollo de un proyecto de realidad virtual utilizando Unity para la programación del juego y Blender para diseñar y crear modelos 3D.
+              Contribuí al desarrollo de un proyecto de realidad virtual utilizando Unity para la programación del juego
+              y Blender para diseñar y crear modelos 3D.
             </p>
           </div>
         </div>
@@ -316,6 +317,15 @@
             </div>
             <h3 class="font-medium text-center">IntelliJ</h3>
             <p class="text-xs text-gray-400 text-center">IDE</p>
+          </div>
+          <!-- Railway -->
+          <div
+            class="bg-slate-800 border border-gray-700 rounded-lg p-4 flex flex-col items-center justify-center hover:border-gray-600 transition-all">
+            <div class="w-12 h-12 flex items-center justify-center mb-2">
+              <img src="assets/svg/railway.svg" alt="Railway" class="w-10 h-10" />
+            </div>
+            <h3 class="font-medium text-center">Railway</h3>
+            <p class="text-xs text-gray-400 text-center">Cloud Platform</p>
           </div>
 
           <!-- Framer -->
@@ -642,55 +652,88 @@
         </div>
       </section>
 
+
       <!-- Proyectos -->
-      <section id="projects-desktop" class="py-8 transition-layout pl-8 pr-0">
-        <h2 class="text-2xl font-bold mb-6">Proyectos</h2>
-        <div class="space-y-4">
-          <!-- Proyecto 1 -->
-          <div class="border border-gray-700 rounded-lg overflow-hidden hover:border-gray-600 transition-all">
-            <div class="p-4">
-              <div class="flex justify-between items-start mb-4">
-                <div>
-                  <h3 class="text-lg font-bold mb-1">HelloBot</h3>
-                  <div class="flex items-center text-xs text-gray-400">
-                    <span class="mr-3">SaaS Startup</span>
-                    <span>9 Pages</span>
-                  </div>
-                </div>
-                <button class="px-3 py-1 bg-green-400 text-black rounded-md text-xs font-medium">
-                  Ver proyecto
-                </button>
+      <section id="projects-desktop" class="py-12 transition-layout px-8">
+        <h2 class="text-3xl font-bold mb-8">Proyectos</h2>
+        <div class="space-y-6">
+
+          <!-- Proyecto 1: UrChoice -->
+          <div
+            class="flex flex-col md:flex-row gap-6 border border-gray-700 rounded-xl overflow-hidden bg-gray-900/40 hover:border-gray-500 hover:shadow-xl transition-all duration-300">
+
+            <!-- Imagen -->
+            <div
+              class="md:w-1/3 w-full h-48 md:h-auto bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-800 relative overflow-hidden">
+              <img src="assets/svg/Ur1.webp" alt="UrChoice Project"
+                class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity">
+            </div>
+
+            <!-- Contenido -->
+            <div class="md:w-2/3 w-full flex flex-col justify-between p-6">
+
+              <!-- Título y botón -->
+
+              <h3 class="text-xl font-bold">UrChoice</h3>
+
+
+
+              <!-- Descripción -->
+              <p class="text-sm text-gray-300 mb-3">
+                Una plataforma web con un sistema de votaciones dinámico y competitivo donde los usuarios deciden, ronda
+                a ronda, su elección favorita entre múltiples opciones.
+              </p>
+
+              <!-- Tecnologías -->
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded-md flex items-center">
+                  <img src="assets/svg/react.svg" alt="React" class="w-4 h-4 mr-1" />
+                  React
+                </span>
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded-md flex items-center">
+                  <img src="assets/svg/tailwind.svg" alt="Tailwind CSS" class="w-4 h-4 mr-1" />
+                  Tailwind CSS
+                </span>
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded-md flex items-center">
+                  <img src="assets/svg/railway.svg" alt="Railway" class="w-4 h-4 mr-1" />
+                  Railway
+                </span>
               </div>
-              <div class="h-40 bg-gray-800 rounded-lg relative flex items-center justify-center">
-                <!-- Placeholder para imagen del proyecto -->
-                <span class="text-gray-500 text-sm">Imagen del proyecto</span>
+
+              <!-- Botones de acción -->
+              <div class="flex gap-3">
+                <a href="https://github.com/LucaCampusfp/UrChoice_Web_TFG" target="_blank"
+                  class="flex items-center px-3 py-1.5 bg-green-400 ver:bg-blue-700 rounded-md text-sm font-medium transition-colors">
+
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                  Code
+                </a>
+                <a href="https://www.urchoice.es/" target="_blank"
+                  class="flex items-center px-3 py-1.5 bg-green-400 hover:bg-gray-600 rounded-md text-sm font-medium transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  Preview
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Proyecto 2 -->
-          <div class="border border-gray-700 rounded-lg overflow-hidden hover:border-gray-600 transition-all">
-            <div class="p-4">
-              <div class="flex justify-between items-start mb-4">
-                <div>
-                  <h3 class="text-lg font-bold mb-1">Crypto Tracker</h3>
-                  <div class="flex items-center text-xs text-gray-400">
-                    <span class="mr-3">Web App</span>
-                    <span>5 Pages</span>
-                  </div>
-                </div>
-                <button class="px-3 py-1 border border-gray-600 rounded-md text-xs">
-                  Ver proyecto
-                </button>
-              </div>
-              <div class="h-40 bg-gray-800 rounded-lg relative flex items-center justify-center">
-                <!-- Placeholder para imagen del proyecto -->
-                <span class="text-gray-500 text-sm">Imagen del proyecto</span>
-              </div>
-            </div>
-          </div>
+
+
+
         </div>
       </section>
+
+
 
       <!-- Educación -->
       <section id="education-desktop" class="py-8 transition-layout pl-8 pr-0">
@@ -778,9 +821,18 @@
             <div class="flex items-center">
               <div class="w-10 h-10 bg-green-400 rounded-lg mr-3 flex items-center justify-center">
                 <!-- Placeholder para icono -->
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-<path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path><path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path><polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"></polygon><path fill="#c62828" d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"></path><path fill="#fbc02d" d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"></path>
-</svg>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                  <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path>
+                  <path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path>
+                  <polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17">
+                  </polygon>
+                  <path fill="#c62828"
+                    d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z">
+                  </path>
+                  <path fill="#fbc02d"
+                    d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z">
+                  </path>
+                </svg>
               </div>
               <div>
                 <p class="text-sm text-gray-400 mb-1">Email:</p>
@@ -851,6 +903,18 @@
               </div>
               <div>
                 <h3 class="font-medium text-sm">IntelliJ</h3>
+              </div>
+            </div>
+
+            <!-- Railway -->
+
+             <div class="flex items-center mb-4">
+              <div class="w-8 h-8 flex items-center justify-center mr-3">
+                <img src="assets/svg/railway.svg" alt="Railway" class="w-6 h-6" />
+
+              </div>
+              <div>
+                <h3 class="font-medium text-sm">Railway</h3>
               </div>
             </div>
 
@@ -1183,7 +1247,7 @@
           <div class="flex items-center justify-between mb-4">
             <div class="flex items-center">
               <div class="w-10 h-10 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">
-                       <img src="assets/svg/rc.png" alt="Reclamaclick" class="w-10 h-10" />
+                <img src="assets/svg/rc.png" alt="Reclamaclick" class="w-10 h-10" />
               </div>
               <div>
                 <h3 class="text-base font-bold">Figma & UI/UX Designer</h3>
@@ -1204,7 +1268,7 @@
           <div class="flex items-center justify-between mb-4">
             <div class="flex items-center">
               <div class="w-10 h-10 bg-gray-700 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">
-                   <img src="assets/svg/sociallovers.jfif" alt="sociallovers" class="w-10 h-10 rounded-lg" />
+                <img src="assets/svg/sociallovers.jfif" alt="sociallovers" class="w-10 h-10 rounded-lg" />
               </div>
               <div>
                 <h3 class="text-base font-bold">Game developer</h3>
@@ -1216,7 +1280,8 @@
             </div>
           </div>
           <p class="text-gray-300 text-xs">
-            Contribuí al desarrollo de un proyecto de realidad virtual utilizando Unity para la programación del juego y Blender para diseñar y crear modelos 3D.
+            Contribuí al desarrollo de un proyecto de realidad virtual utilizando Unity para la programación del juego y
+            Blender para diseñar y crear modelos 3D.
           </p>
         </div>
       </div>
@@ -1227,45 +1292,68 @@
       <h2 class="text-xl font-bold mb-6">Proyectos</h2>
       <div class="space-y-4">
         <!-- Proyecto 1 -->
-        <div class="border border-gray-700 rounded-lg overflow-hidden hover:border-gray-600 transition-all">
+        <div
+          class="border border-gray-700 rounded-lg overflow-hidden hover:border-gray-500 hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
           <div class="p-4">
-            <div class="flex justify-between items-start mb-4">
-              <div>
-                <h3 class="text-base font-bold mb-1">HelloBot</h3>
-                <div class="flex items-center text-xs text-gray-400">
-                  <span class="mr-3">SaaS Startup</span>
-                  <span>9 Pages</span>
-                </div>
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-base font-bold">UrChoice</h3>
+
               </div>
-              <button class="px-2 py-1 bg-green-400 text-black rounded-md text-xs font-medium">
-                Ver proyecto
-              </button>
+              <div class="flex justify-between items-center mb-2">
+                <div class="flex items-center text-xs text-gray-400">
+                  <span>Plataforma web de juego interactivo</span>
+                </div>
+
+              </div>
+              <p class="text-xs text-gray-400 mb-2">Una plataforma web con un sistema de votaciones dinámico y
+                competitivo donde los usuarios deciden, ronda a ronda, su elección favorita entre múltiples opciones.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded-md flex items-center">
+                  <img src="assets/svg/react.svg" alt="React" class="w-4 h-4 mr-1" />
+                  React
+                </span>
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded-md flex items-center">
+                  <img src="assets/svg/tailwind.svg" alt="Tailwind CSS" class="w-4 h-4 mr-1" />
+                  Tailwind CSS
+                </span>
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded-md flex items-center">
+                  <img src="assets/svg/railway.svg" alt="Railway" class="w-4 h-4 mr-1" />
+                  Railway
+                </span>
+              </div>
             </div>
-            <div class="h-32 bg-gray-800 rounded-lg relative flex items-center justify-center">
-              <span class="text-gray-500 text-xs">Imagen del proyecto</span>
+            <div
+              class="h-32 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-800 rounded-lg relative overflow-hidden">
+              <img src="assets/svg/Ur1.webp" alt="UrChoice Project"
+                class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+            </div>
+            <div class="flex justify-between mt-3">
+              <a href="https://github.com/LucaCampusfp/UrChoice_Web_TFG" target="_blank"
+                class="flex items-center px-2 py-1 bg-green-400 hover:bg-gray-700 rounded-md text-xs  transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+                Code
+              </a>
+              <a href="https://www.urchoice.es/" target="_blank"
+                class="flex items-center px-2 py-1 bg-green-400 hover:bg-gray-700 rounded-md text-xs transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                Preview
+              </a>
             </div>
           </div>
         </div>
-        <!-- Proyecto 2 -->
-        <div class="border border-gray-700 rounded-lg overflow-hidden hover:border-gray-600 transition-all">
-          <div class="p-4">
-            <div class="flex justify-between items-start mb-4">
-              <div>
-                <h3 class="text-base font-bold mb-1">Crypto Tracker</h3>
-                <div class="flex items-center text-xs text-gray-400">
-                  <span class="mr-3">Web App</span>
-                  <span>5 Pages</span>
-                </div>
-              </div>
-              <button class="px-2 py-1 border border-gray-600 rounded-md text-xs">
-                Ver proyecto
-              </button>
-            </div>
-            <div class="h-32 bg-gray-800 rounded-lg relative flex items-center justify-center">
-              <span class="text-gray-500 text-xs">Imagen del proyecto</span>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
 
@@ -1350,9 +1438,18 @@
         <div class="border border-gray-700 rounded-lg p-4 hover:border-gray-600 transition-all">
           <div class="flex items-center">
             <div class="w-10 h-10 bg-green-400 rounded-lg mr-3 flex items-center justify-center">
-<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-<path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path><path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path><polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"></polygon><path fill="#c62828" d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"></path><path fill="#fbc02d" d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"></path>
-</svg>
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path>
+                <path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path>
+                <polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17">
+                </polygon>
+                <path fill="#c62828"
+                  d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z">
+                </path>
+                <path fill="#fbc02d"
+                  d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z">
+                </path>
+              </svg>
             </div>
             <div>
               <p class="text-xs text-gray-400 mb-1">Email:</p>
@@ -1374,8 +1471,8 @@
       <div class="flex items-center">
         <p class="text-gray-400 text-sm mr-2">Checked by Luca Jin</p>
         <div class="w-6 h-6 bg-gray-600 rounded-full overflow-hidden">
-          <img src="assets/images/mobile/profile.jpeg" alt="Perfil de Luca Jin"
-            class="w-full h-full object-cover block" style="object-position: 0 20%;">
+          <img src="assets/images/mobile/profile.jpeg" alt="Perfil de Luca Jin" class="w-full h-full object-cover block"
+            style="object-position: 0 20%;">
 
         </div>
       </div>
