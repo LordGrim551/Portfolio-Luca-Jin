@@ -9,7 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule,  NavbarComponent],
+  imports: [CommonModule,  NavbarComponent, PreloaderComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
