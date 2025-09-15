@@ -41,3 +41,17 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #4ade80 #0f172a;
 }
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('assets/fonts/BebasNeue-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gobold';
+  src: url('assets/fonts/Gobold Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
